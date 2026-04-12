@@ -4,16 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dilip Reddymalla – Computer Science student and web developer portfolio">
+    <meta name="description" content="Dilip Reddymalla — Full-Stack Developer & Computer Science student at CBIT. Building scalable web apps with React, Node.js, and MongoDB.">
 
-    <title>Dilip Reddymalla | Portfolio</title>
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dilip Reddymalla | Full-Stack Developer">
+    <meta property="og:description" content="Computer Science student at CBIT building scalable web applications. MERN Stack, REST APIs, JWT Auth.">
+    <meta property="og:url" content="https://dilip-reddymalla.github.io/Portfolio/">
+    <meta property="og:image" content="https://dilip-reddymalla.github.io/Portfolio/assets/Dilip.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dilip Reddymalla | Full-Stack Developer">
+    <meta name="twitter:description" content="CS student at CBIT. MERN stack, REST APIs, and open-source contributor.">
 
-    <!-- Font -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <title>Dilip Reddymalla | Full-Stack Developer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+
+    <!-- Fonts: Poppins (body) + Space Grotesk (display) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
     </noscript>
 
     <!-- CSS -->
@@ -21,316 +37,462 @@
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="logo">Dilip Reddymalla</div>
-        <nav>
+    <!-- Global atmosphere layers -->
+    <div class="bg-grid"></div>
+    <div id="cursor-glow"></div>
+    <div id="progress-bar"></div>
+    <svg class="noise-overlay" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <filter id="noise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noise)" />
+    </svg>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <a href="#home" class="logo">Dilip</a>
+        <nav id="desktop-nav">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
         </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Dilip Reddymalla</h1>
-                <h2>Computer Science Student & Web Developer</h2>
 
-                <p class="hero-text">
-                    I build modern, interactive web applications and continuously improve
-                    my problem-solving skills.
+        <!-- ══════════════════ HERO ══════════════════ -->
+        <section id="home" class="hero">
+            <div class="hero-glow-blob"></div>
+
+            <div class="hero-content">
+                <div class="eyebrow reveal" style="--i:0;">Full-Stack Developer</div>
+
+                <h1 class="name-split">
+                    <span class="name-line"><span>Dilip</span></span>
+                    <span class="name-line"><span>Reddymalla<span class="accent-dot">.</span></span></span>
+                </h1>
+
+                <p class="hero-text reveal" style="--i:1;">
+                    I build scalable web applications with clean architecture — from
+                    REST API backends to animated React frontends. Currently exploring
+                    system design and TypeScript.
                 </p>
 
-                <div class="hero-cta">
-                    <a href="#projects" class="btn primary">View Projects</a>
-                    <a href="assets/Dilip_Resume.pdf" class="btn outline" target="_blank">
-                        Download Resume
-                    </a>
-                    <div class="hero-socials">
-                        <a href="https://github.com/Dilip-Reddymalla" target="_blank" aria-label="GitHub">
-                            <img src="assets/svg/Github_.png" alt="GitHub" width="24" height="24">
-                        </a>
-                        <a href="https://www.linkedin.com/in/dilip-reddymalla/" target="_blank" aria-label="LinkedIn">
-                            <img src="assets/svg/linkedin.svg" alt="LinkedIn" width="24" height="24">
-                        </a>
-                        <a href="mailto:reddymaladilip@gmail.com" aria-label="Email">
-                            <img src="assets/svg/Gmail.png" alt="Gmail" width="24" height="24">
-                        </a>
-                    </div>
+                <div class="availability-badge reveal" style="--i:2;">
+                    <div class="availability-dot"></div>
+                    <span>Available for internships & opportunities</span>
+                </div>
 
+                <div class="hero-cta reveal" style="--i:3;">
+                    <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="assets/Portfolio.pdf" class="btn outline" target="_blank">
+                        Download CV ↓
+                    </a>
+                </div>
+
+                <div class="hero-socials reveal" style="--i:4;">
+                    <a href="https://github.com/Dilip-Reddymalla" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <img src="assets/svg/Github_.png" alt="GitHub" width="18" height="18">
+                    </a>
+                    <a href="https://www.linkedin.com/in/dilip-reddymalla/" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        <img src="assets/svg/linkedin.svg" alt="LinkedIn" width="18" height="18">
+                    </a>
+                    <a href="mailto:reddymaladilip@gmail.com" aria-label="Email">
+                        <img src="assets/svg/Gmail.png" alt="Gmail" width="18" height="18">
+                    </a>
                 </div>
             </div>
 
-            <div class="hero-image">
-                <img src="assets/Dilip.jpeg" width="280" height="280" fetchpriority="high" alt="Dilip Reddymalla"
-                    loading="eager">
+            <div class="hero-image reveal" style="--i:2;">
+                <img src="assets/Dilip.jpeg" width="300" height="300" fetchpriority="high"
+                    alt="Dilip Reddymalla — Full-Stack Developer" loading="eager">
             </div>
         </section>
 
+        <hr class="divider">
 
-
-
-        <section id="about" class="about">
-            <h2>About Me</h2>
+        <!-- ══════════════════ ABOUT ══════════════════ -->
+        <section id="about">
+            <h2 class="reveal">About Me</h2>
 
             <div class="about-grid">
-                <!-- Left: Text -->
                 <div class="about-content">
-                    <p>
-                        I am a second-year Computer Science student with a strong interest in
-                        web development and software engineering.
+                    <p class="reveal" style="--i:0;">
+                        I'm a second-year Computer Science student with a <span class="highlight">9.33 CGPA</span>
+                        at Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad — building
+                        production-grade web applications while still in university.
                     </p>
-
-                    <p>
-                        I am currently studying at
-                        <span class="highlight">Chaitanya Bharathi Institute of Technology (CBIT)</span>,
-                        Hyderabad, where I am building a solid foundation in programming,
-                        data structures, and core computer science subjects.
+                    <p class="reveal" style="--i:1;">
+                        I focus on full-stack architecture: designing secure REST APIs with
+                        Node.js and Express, building responsive UIs with React, and managing
+                        data with MongoDB. I implement real security patterns — JWT authentication,
+                        bcrypt hashing, RBAC, and rate limiting.
                     </p>
-
-                    <p>
-                        Alongside academics, I work on personal projects, explore modern
-                        web technologies, and actively prepare for internships.
+                    <p class="reveal" style="--i:2;">
+                        Alongside academics, I lead teams in hackathons, contribute to open source,
+                        and actively grind DSA to strengthen my engineering foundations.
                     </p>
                 </div>
 
-                <!-- Right: Quick Stats -->
                 <div class="about-metrics">
-                    <div class="metric">
+                    <div class="metric reveal" style="--i:0;">
                         <span class="metric-value">CGPA</span>
-                        <p>9.33 / 10</p>
+                        <p>9.33</p>
                     </div>
-
-                    <div class="metric">
+                    <div class="metric reveal" style="--i:1;">
                         <span class="metric-value">Projects</span>
-                        <p>4</p>
+                        <p>4+</p>
+                    </div>
+                    <div class="metric reveal" style="--i:2;">
+                        <span class="metric-value">Year</span>
+                        <p>2nd</p>
                     </div>
                 </div>
-
             </div>
         </section>
 
+        <hr class="divider">
+
+        <!-- ══════════════════ EDUCATION ══════════════════ -->
         <section id="education">
-            <h2>Education</h2>
+            <h2 class="reveal">Education</h2>
 
             <div class="education-timeline">
-                <div class="edu-item">
-                    <span class="year">2024 – Present</span>
-                    <h3>B.Tech in Computer Science</h3>
-                    <p>Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad</p>
+                <div class="edu-item reveal" style="--i:0;">
+                    <span class="year">2024 – 2028</span>
+                    <h3>B.Tech — Computer Science Engineering</h3>
+                    <p>Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad &nbsp;·&nbsp; CGPA: 9.33</p>
                 </div>
-
-                <div class="edu-item">
+                <div class="edu-item reveal" style="--i:1;">
                     <span class="year">2022 – 2024</span>
-                    <h3>Intermediate (MPC)</h3>
+                    <h3>Intermediate — MPC</h3>
                     <p>Board of Intermediate Education, Telangana</p>
                 </div>
-
-                <div class="edu-item">
-                    <span class="year">2021 – 2022</span>
-                    <h3>Central Board of Secondary Education (CBSE)</h3>
+                <div class="edu-item reveal" style="--i:2;">
+                    <span class="year">Until 2022</span>
+                    <h3>Secondary — CBSE</h3>
                     <p>Warangal, Telangana</p>
                 </div>
             </div>
         </section>
 
+        <hr class="divider">
 
-
+        <!-- ══════════════════ SKILLS ══════════════════ -->
         <section id="skills">
-            <h2>Skills</h2>
+            <h2 class="reveal">Skills & Technologies</h2>
 
-            <!-- Languages -->
             <div class="skill-category">
-                <h3>Languages</h3>
+                <h3 class="reveal" style="--i:0;">Languages</h3>
                 <div class="skills-icons">
-                    <div class="skill-icon">
-                        <img src="assets/svg/Html5.svg" alt="Html5">
-                        <span>HTML</span>
+                    <div class="skill-icon reveal active" style="--i:1;">
+                        <img src="assets/svg/Java.svg" alt="Java"> Java
                     </div>
-                    <div class="skill-icon">
-                        <img src="assets/svg/CSS3.svg" alt="css3">
-                        <span>CSS</span>
+                    <div class="skill-icon reveal active" style="--i:2;">
+                        <img src="assets/svg/Python.svg" alt="Python"> Python
                     </div>
-                    <div class="skill-icon">
-                        <img src="assets/svg/JS.svg" alt="JS">
-                        <span>JavaScript</span>
+                    <div class="skill-icon reveal active" style="--i:3;">
+                        <img src="assets/svg/Cpp.svg" alt="C++"> C++
                     </div>
-                    <div class="skill-icon">
-                        <img src="assets/svg/C.png" alt="C">
-                        <span>C</span>
+                    <div class="skill-icon reveal" style="--i:4;">
+                        <img src="assets/svg/JS.svg" alt="JavaScript"> JavaScript
                     </div>
-                    <div class="skill-icon">
-                        <img src="assets/svg/cpp.svg" alt="C++">
-                        <span>C++</span>
+                    <div class="skill-icon reveal" style="--i:5;">
+                        <img src="assets/svg/Html5.svg" alt="HTML"> HTML
                     </div>
-
-                    <div class="skill-icon">
-                        <img src="assets/svg/Python.svg" alt="Python">
-                        <span>Python</span>
-                    </div>
-                    <div class="skill-icon">
-                        <img src="assets/svg/Java.svg" alt="Java">
-                        <span>Java</span>
+                    <div class="skill-icon reveal" style="--i:6;">
+                        <img src="assets/svg/CSS3.svg" alt="CSS"> CSS
                     </div>
                 </div>
             </div>
 
-            <!-- Frameworks / Libraries -->
             <div class="skill-category">
-                <h3>Frameworks & Libraries</h3>
+                <h3 class="reveal" style="--i:0;">Frameworks & Libraries</h3>
                 <div class="skills-icons">
-                    <div class="skill-icon">
-                        <img src="assets/svg/React.svg" alt="React">
-                        <span>React</span>
+                    <div class="skill-icon reveal active" style="--i:1;">
+                        <img src="assets/svg/React.svg" alt="React"> React.js
                     </div>
-                    <div class="skill-icon">
-                        <img src="assets/svg/Django.svg" alt="Django">
-                        <span>Django</span>
+                    <div class="skill-icon reveal active" style="--i:2;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"> Node.js
+                    </div>
+                    <div class="skill-icon reveal active" style="--i:3;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" style="filter:invert(1);"> Express.js
+                    </div>
+                    <div class="skill-icon reveal" style="--i:4;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"> MongoDB
+                    </div>
+                    <div class="skill-icon reveal" style="--i:5;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite"> Vite
                     </div>
                 </div>
             </div>
 
-            <!-- Tools -->
             <div class="skill-category">
-                <h3>Tools</h3>
+                <h3 class="reveal" style="--i:0;">Tools & Concepts</h3>
                 <div class="skills-icons">
-                    <div class="skill-icon">
-                        <img src="assets/svg/git.svg" alt="Git">
-                        <span>Git</span>
+                    <div class="skill-icon reveal" style="--i:1;">
+                        <img src="assets/svg/git.svg" alt="Git"> Git
                     </div>
-                    <div class="skill-icon">
-                        <img src="assets/svg/Github_.png" alt="Github">
-                        <span>GitHub</span>
+                    <div class="skill-icon reveal" style="--i:2;">
+                        <img src="assets/svg/Github.svg" alt="GitHub"> GitHub
                     </div>
-                    <div class="skill-icon">
-                        <img src="assets/svg/Vs Code.svg" alt="Vs Code">
-                        <span>VS Code</span>
+                    <div class="skill-icon reveal" style="--i:3;">
+                        <img src="assets/svg/Vs Code.svg" alt="VS Code"> VS Code
                     </div>
-                    <div class="skill-icon">
-                        <img src="assets/svg/Figma.svg" alt="Figma">
-                        <span>Figma</span>
-                    </div>
-
+                    <div class="skill-icon reveal" style="--i:4;">REST APIs</div>
+                    <div class="skill-icon reveal" style="--i:5;">JWT Auth</div>
+                    <div class="skill-icon reveal" style="--i:6;">RBAC</div>
+                    <div class="skill-icon reveal" style="--i:7;">Data Structures</div>
+                    <div class="skill-icon reveal" style="--i:8;">OOP</div>
                 </div>
+            </div>
+
+            <!-- Currently Learning -->
+            <div class="learning-strip reveal" style="--i:2;">
+                <h3>Currently Learning</h3>
+                <div class="learning-items">
+                    <span class="learning-item">Next Js</span>
+                    <span class="learning-item">SQL</span>
+                    <span class="learning-item">DSA — 100+ problems</span>
+                    <span class="learning-item">Docker basics</span>
+                </div>
+            </div>
+
+            <!-- Coding Profiles -->
+            <div class="coding-profiles">
+                <a href="https://github.com/Dilip-Reddymalla" target="_blank" rel="noopener noreferrer"
+                    class="coding-profile-card reveal" style="--i:0;">
+                    <span class="profile-platform">GitHub</span>
+                    <span class="profile-stat">4+</span>
+                    <span class="profile-label">Repositories</span>
+                </a>
+                <a href="https://www.linkedin.com/in/dilip-reddymalla/" target="_blank" rel="noopener noreferrer"
+                    class="coding-profile-card reveal" style="--i:1;">
+                    <span class="profile-platform">LinkedIn</span>
+                    <span class="profile-stat">Open</span>
+                    <span class="profile-label">Connect with me</span>
+                </a>
+                <a href="mailto:reddymaladilip@gmail.com"
+                    class="coding-profile-card reveal" style="--i:2;">
+                    <span class="profile-platform">Email</span>
+                    <span class="profile-stat">Say hi</span>
+                    <span class="profile-label">reddymaladilip@gmail.com</span>
+                </a>
             </div>
         </section>
 
+        <hr class="divider">
+
+        <!-- ══════════════════ PROJECTS ══════════════════ -->
         <section id="projects">
-            <h2>Projects</h2>
+            <h2 class="reveal">Featured Projects</h2>
 
             <div class="projects-grid">
 
-                <div class="project-card">
+                <div class="project-card reveal" style="--i:0;">
+                    <div class="card-type">Full-Stack <span class="arrow-icon">↗</span></div>
                     <div class="project-content">
-                        <h3>Portfolio Website</h3>
-                        <p>Personal responsive portfolio with animations and dark theme.</p>
+                        <h3>Full-Stack Blog Platform</h3>
+                        <p>Blogging platform with React frontend and Node.js REST API. Secure JWT + bcrypt + HTTP-only cookie auth, RBAC for admin/user permissions, CRUD APIs, and ImageKit image uploads secured with Helmet and rate limiting.</p>
                     </div>
-
-                    <div class="project-overlay">
-                        <p>HTML • CSS • JavaScript</p>
-                        <a href="https://github.com/Dilip-Reddymalla/Portfolio" target="_blank">GitHub</a>
-                        <a href="https://dilip-reddymalla.github.io/Portfolio/" target="_blank">Live Demo</a>
+                    <div class="project-links">
+                        <span class="tech-stack">React · Node.js · Express · MongoDB</span>
+                        <a href="https://github.com/Dilip-Reddymalla/Modern-Blog-Page-Backend" target="_blank" rel="noopener noreferrer" class="link-btn">Code ↗</a>
                     </div>
                 </div>
 
-                
-                <div class="project-card">
+                <div class="project-card reveal" style="--i:1;">
+                    <div class="card-type">Frontend <span class="arrow-icon">↗</span></div>
                     <div class="project-content">
-                        <h3>F1</h3>
-                        <p>Provides F1 data using public API.</p>
+                        <h3>Modern Blog Frontend</h3>
+                        <p>React + Vite frontend with dynamic routing, protected routes, Axios API integration, and fluid Framer Motion animations. Fully reusable component library.</p>
                     </div>
-                    
-                    <div class="project-overlay">
-                        <p>API • DOM • JavaScript</p>
-                        <a href="https://github.com/Dilip-Reddymalla/F1" target="_blank">GitHub</a>
-                        <a href="https://dilip-reddymalla.github.io/F1/" target="_blank">Live Demo</a>
+                    <div class="project-links">
+                        <span class="tech-stack">React · Vite · React Router · Axios</span>
+                        <a href="https://modern-blogs.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-btn">Live ↗</a>
+                        <a href="https://github.com/Dilip-Reddymalla/Modern-Blogs" target="_blank" rel="noopener noreferrer" class="link-btn">Code ↗</a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Weather App</h3>
-                        <p>Displays real-time weather using public API.</p>
-                    </div>
-                    
-                    <div class="project-overlay">
-                        <p>API • JavaScript</p>
-                        <a href="https://github.com/Dilip-Reddymalla/Weather-Dashboard" target="_blank">GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>To-Do List App</h3>
-                        <p>Task management app with add and delete features.</p>
-                    </div>
 
-                    <div class="project-overlay">
-                        <p>JavaScript • DOM</p>
-                        <a href="https://github.com/Dilip-Reddymalla/TO-DO" target="_blank">GitHub</a>
+                <div class="project-card reveal" style="--i:2;">
+                    <div class="card-type">Web App <span class="arrow-icon">↗</span></div>
+                    <div class="project-content">
+                        <h3>F1 Racing Dashboard</h3>
+                        <p>Real-time Formula 1 data dashboard integrating the Ergast F1 API. Features client-side caching via React hooks, race result tables, and SVG-based race visualizations.</p>
+                    </div>
+                    <div class="project-links">
+                        <span class="tech-stack">React · Vite · REST APIs</span>
+                        <a href="https://f1-react-hazel.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-btn">Live ↗</a>
+                        <a href="https://github.com/Dilip-Reddymalla/F1-React" target="_blank" rel="noopener noreferrer" class="link-btn">Code ↗</a>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" style="--i:3;">
+                    <div class="card-type">Design + Dev <span class="arrow-icon">↗</span></div>
+                    <div class="project-content">
+                        <h3>Developer Portfolio</h3>
+                        <p>This site — responsive dark-theme portfolio with GPU-accelerated scroll animations, Intersection Observer reveals, cursor glow, reading progress bar, and mobile hamburger menu.</p>
+                    </div>
+                    <div class="project-links">
+                        <span class="tech-stack">HTML · CSS · JavaScript</span>
+                        <a href="https://dilip-reddymalla.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" class="link-btn">Live ↗</a>
+                        <a href="https://github.com/Dilip-Reddymalla/Portfolio" target="_blank" rel="noopener noreferrer" class="link-btn">Code ↗</a>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <section>
-            <div class="participations">
-                <h2>Participations & Achievements</h2>
+        <hr class="divider">
 
-                <div class="content">
-                    <h3>Smart India Hackathon</h3>
+        <!-- ══════════════════ EXPERIENCE & ACTIVITIES ══════════════════ -->
+        <section id="experience">
+            <h2 class="reveal">Experience & Activities</h2>
+
+            <div class="experience-list">
+
+                <div class="experience-card reveal" style="--i:0;">
+                    <div class="exp-header">
+                        <h3>Team Lead — Smart India Hackathon (Internal)</h3>
+                        <span class="exp-meta">CBIT · 2024</span>
+                    </div>
                     <p>
-                        Participated in the internal round of the
-                        <strong>Smart India Hackathon</strong> organized by our college.
-                        Served as the <strong>Team Lead</strong>, and our team was
-                        successfully selected at the college level.
+                        Led a team of 6 through the college-level round of Smart India Hackathon. Coordinated
+                        problem analysis, divided technical responsibilities, and presented the solution to
+                        a panel of judges. Our team was successfully selected at the college level.
                     </p>
+                    <div class="exp-tags">
+                        <span class="exp-tag">Team Leadership</span>
+                        <span class="exp-tag">Problem Solving</span>
+                        <span class="exp-tag">Project Management</span>
+                        <span class="exp-tag">Hackathon</span>
+                    </div>
                 </div>
-                <div class="content">
-                    <h3>Hacktoberfest</h3>
+
+                <div class="experience-card reveal" style="--i:1;">
+                    <div class="exp-header">
+                        <h3>Open Source Contributor — Hacktoberfest</h3>
+                        <span class="exp-meta">COSC Club · 2024</span>
+                    </div>
                     <p>
-                        Participated in the <strong>Hacktoberfest</strong> event conducted by the
-                        COSC Club of our college. Developed a project that analyzes resumes and
-                        provides recommendations for improvement based on the given job description.
+                        Participated in Hacktoberfest organized by the COSC Club at CBIT. Built a
+                        resume analyzer that evaluates resumes against a given job description and
+                        provides actionable improvement recommendations using NLP-based comparison.
                     </p>
+                    <div class="exp-tags">
+                        <span class="exp-tag">Open Source</span>
+                        <span class="exp-tag">Python</span>
+                        <span class="exp-tag">NLP</span>
+                        <span class="exp-tag">Hacktoberfest</span>
+                    </div>
+                </div>
+
+                <div class="experience-card reveal" style="--i:2;">
+                    <div class="exp-header">
+                        <h3>Independent Full-Stack Developer</h3>
+                        <span class="exp-meta">Self-Directed · 2024 – Present</span>
+                    </div>
+                    <p>
+                        Building and shipping full-stack web applications independently — from
+                        architecture decisions and API design to frontend implementation and deployment.
+                        Projects include a feature-complete blogging platform with auth, RBAC, and
+                        image management systems.
+                    </p>
+                    <div class="exp-tags">
+                        <span class="exp-tag">MERN Stack</span>
+                        <span class="exp-tag">REST APIs</span>
+                        <span class="exp-tag">JWT Auth</span>
+                        <span class="exp-tag">MongoDB</span>
+                    </div>
                 </div>
 
             </div>
         </section>
 
+        <hr class="divider">
 
+        <!-- ══════════════════ CONTACT ══════════════════ -->
         <section id="contact">
-            <h2>Contact</h2>
+            <h2 class="reveal">Contact</h2>
 
-            <p class="contact-text">
-                I’m open to internship opportunities, collaborations, and learning
-                opportunities.
-            </p>
+            <div class="contact-inner">
+                <h2 class="contact-heading reveal" style="--i:0;">
+                    Let's build something<br><span>great together.</span>
+                </h2>
 
-            <div class="contact-links">
-                <button class="btn-email" id="Email-btn">Email</button>
-                <span class="copied_notify hidden" id="notify">copied</span>
-                <a href="https://github.com/Dilip-Reddymalla" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/dilip-reddymalla/" target="_blank">LinkedIn</a>
+                <p class="contact-text reveal" style="--i:1;">
+                    I'm open to internship opportunities, collaborations, and interesting
+                    projects. If you have an idea or a role that fits, reach out — I respond
+                    within a day.
+                </p>
+
+                <div class="contact-email-display reveal" style="--i:2;">
+                    📬 &nbsp; reddymaladilip@gmail.com
+                </div>
+
+                <div class="contact-actions reveal" style="--i:3;">
+                    <button class="btn-email" id="Email-btn">Copy Email</button>
+                    <span class="copied_notify hidden" id="notify">✓ Copied!</span>
+                    <a href="mailto:reddymaladilip@gmail.com" class="btn outline">Open Email App</a>
+                </div>
+
+                <div class="contact-link-row reveal" style="--i:4;">
+                    <a href="https://github.com/Dilip-Reddymalla" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/dilip-reddymalla/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="assets/Dilip_Reddymalla_CV.pdf" target="_blank">Download CV</a>
+                </div>
             </div>
         </section>
 
+        <!-- ══════════════════ FOOTER ══════════════════ -->
         <footer class="footer">
-            <div class="footer-content">
-                <h3>Dilip Reddymalla</h3>
-                <p>Computer Science Student | Web Developer</p>
-
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <h3>Dilip Reddymalla</h3>
+                    <p>Full-Stack Developer · CS @ CBIT</p>
+                </div>
+                <nav class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>© 2026 Dilip Reddymalla · Built with HTML, CSS & JS</p>
                 <div class="footer-socials">
-                    <a href="https://github.com/Dilip-Reddymalla" target="_blank">GitHub</a>
-                    <a href="https://www.linkedin.com/in/dilip-reddymalla/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Dilip-Reddymalla" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/dilip-reddymalla/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a>
                     <a href="mailto:reddymaladilip@gmail.com">Email</a>
                 </div>
             </div>
-
-            <p class="footer-bottom">© 2025 Dilip Reddymalla</p>
         </footer>
-
 
     </main>
 
