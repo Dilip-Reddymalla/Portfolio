@@ -38,7 +38,7 @@ A personal developer portfolio built with pure HTML, CSS, and JavaScript. Dark-t
 | About | Bio, CGPA, projects count, year metrics |
 | Education | Timeline from CBSE → Intermediate → CBIT |
 | Skills | Language / Framework / Tool chips with icons |
-| Projects | 4 project cards with live + code links |
+| Projects | 5 project cards with live + code links |
 | Experience | Hackathons, open source, independent work |
 | Contact | Email copy, social links |
 
@@ -48,6 +48,7 @@ A personal developer portfolio built with pure HTML, CSS, and JavaScript. Dark-t
 
 | Project | Stack | Links |
 |---------|-------|-------|
+| PoultryOps — Enterprise Biometric Suite | React 19 · TypeScript · Express 5 · FastAPI · PostgreSQL · Prisma · Docker | [Live](https://poultryops.vercel.app/about) · [Code](https://github.com/Dilip-Reddymalla/poultry-management-system) |
 | Full-Stack Blog Platform | React · Node.js · Express · MongoDB | [Code](https://github.com/Dilip-Reddymalla/Modern-Blog-Page-Backend) |
 | Modern Blog Frontend | React · Vite · React Router · Axios | [Live](https://modern-blogs.vercel.app) · [Code](https://github.com/Dilip-Reddymalla/Modern-Blogs) |
 | F1 Racing Dashboard | React · Vite · REST APIs | [Live](https://f1-react-hazel.vercel.app) · [Code](https://github.com/Dilip-Reddymalla/F1-React) |
@@ -74,15 +75,21 @@ Portfolio/
 │   └── script.v1.js    # All interactivity
 └── assets/
     ├── Dilip.jpeg                  # Profile photo
-    ├── Dilip_Reddymalla_CV.pdf     # Resume download
+    ├── cv_Dilip-Reddymalla.pdf     # Resume download
     └── svg/                        # Skill icons
         ├── Java.svg
         ├── Python.svg
         ├── Cpp.svg
         ├── JS.svg
+        ├── TypeScript.svg
         ├── Html5.svg
         ├── CSS3.svg
         ├── React.svg
+        ├── PostgreSQL.svg
+        ├── Prisma.svg
+        ├── FastAPI.svg
+        ├── Tailwind.svg
+        ├── Docker.svg
         ├── git.svg
         ├── Github.svg
         ├── Vs Code.svg
